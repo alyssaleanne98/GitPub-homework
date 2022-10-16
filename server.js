@@ -57,8 +57,15 @@ const drinks = [
   ];
 
 // get route 
+ app.get('/getroute', (req, res) => {
+    res.send("it works!");
+ })
+
+ // drinks route 
  app.get('/drinks', (req, res) => {
-    res.send(drinks);
+    res.render('index.ejs', {
+        drinks: drinks,
+    });
  })
 
  // tell express to listen for requests from the browser (client) 
