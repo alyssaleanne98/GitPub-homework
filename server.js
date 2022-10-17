@@ -68,6 +68,12 @@ const drinks = [
     });
  })
 
+ // show route 
+ app.get('/drinks/:id', (req, res) => {
+    res.send(req.params.id);
+ })
+
+
  // tell express to listen for requests from the browser (client) 
  // make sure that this is located at bottom of code 
 app.listen(3000, () => {
