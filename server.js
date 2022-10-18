@@ -14,6 +14,7 @@ app.get('/', function (req, res) {
 // set up your database 
 
 const drinks = require('./models/drinks')
+const foods = require('./models/foods')
     
 
 // get route 
@@ -21,11 +22,16 @@ const drinks = require('./models/drinks')
     res.send("it works!");
  })
 
- // drinks route 
+ // index route 
  app.get('/drinks', (req, res) => {
     res.render('drinksindex.ejs', {
         drinks: drinks,
     });
+ })
+ app.get('/foods', (req, res) => {
+    res.render('foodsindex.ejs', {
+        foods: foods,
+    })
  })
 
  // show route 
@@ -34,6 +40,11 @@ const drinks = require('./models/drinks')
     res.render('drinksshow.ejs', {
         drinks: drinks[req.params.id],
     });
+ })
+ app.get('/foods/:id', (req, res) => {
+    res.render('foodshow.ejs', {
+        foods: foods[req.params.id], 
+    })
  })
 
 

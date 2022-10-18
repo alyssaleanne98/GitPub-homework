@@ -12,7 +12,7 @@
     <style type="text/css">
   body {
     color: blanchedalmond;
-    background-color: pink;
+    background-color: steelblue;
     text-transform: capitalize; 
   }
 </style>
@@ -20,8 +20,8 @@
   <div>
     <h1>At foo bar </h1>
     <ul> 
-      <% for(let i = 0; i < drinks.length; i++) { %>
-        <li><a href="/drinks/<%=i%>"><%= drinks[i].name %></a></li>
+      <% for(let i = 0; i < foods.length; i++) { %>
+        <li><a href="/foods/<%=i%>"><%= foods[i].name %></a></li>
       <% } %> 
     </ul>
   </div>
