@@ -42,3 +42,4 @@ const drinks = [
     },
   ];
   
+  module.exports = drinks
